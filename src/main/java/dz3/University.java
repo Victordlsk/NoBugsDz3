@@ -33,8 +33,8 @@ public class University
 
 
     static String universityName;
-    final int studentID;
-    String studentName;
+    private final int studentID;
+    private String studentName;
 
     public University (int studentID, String studentName) {
         this.studentID = studentID;
@@ -42,12 +42,22 @@ public class University
     }
 
     public static void changeUniversityName(String newName) {
+
         universityName = newName;
+    }
+    public int getStudentID() {
+        return studentID;
     }
 
     public String getStudentName() {
+
         return studentName;
     }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+
 
     public void printStudentInfo() {
         System.out.println("Имя студента - " + studentName + " Номер студента - " + studentID + " Название университета - " + universityName);

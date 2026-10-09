@@ -16,12 +16,12 @@ public class Company {
         emp1.printEmployeeinfo();
         emp2.printEmployeeinfo();
 
-        //emp1.employeeID = 3;
+        //emp1.employeeID = 3;// проверка невозможности изменения final-поля
     }
 
     static String companyName;
-    final int employeeID;
-    String employeeName;
+    private final int employeeID;
+    private String employeeName;
 
     public Company(int employeeID, String employeeName) {
         this.employeeID = employeeID;
@@ -30,6 +30,9 @@ public class Company {
 
     public static void printCompanyName() {
         System.out.println(companyName);
+    }
+    public int getEmployeeID() {
+        return employeeID;
     }
 
     public void setEmployeeName(String employeeName) {

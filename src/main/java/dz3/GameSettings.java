@@ -23,9 +23,8 @@ public class GameSettings {
 
     static int maxPlayers;
 
-    final String gameName;
-
-    int currentPlayers;
+    private final String gameName;
+    private int currentPlayers;
 
     public GameSettings(String gameName) {
         this.gameName = gameName;
@@ -36,10 +35,25 @@ public class GameSettings {
 
     }
 
+    public String getGameName() {
+        return gameName;
+    }
+
+    public int getCurrentPlayers() {
+        return currentPlayers;
+    }
+
+    //нет смысла по логике самой переменной
+   /* public void setCurrentPlayers(int currentPlayers) {
+        this.currentPlayers = currentPlayers;
+    }*/
+
     public void addPlayer() {
         if (currentPlayers < maxPlayers) {
             currentPlayers++;
-        } else System.out.println("Достигнуто максимальное количество игроков");
+        } else {
+            System.out.println("Достигнуто максимальное количество игроков");
+        }
     }
 
     public void printGameStatus() {
